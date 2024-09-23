@@ -14,17 +14,15 @@ const { test, describe } = require('node:test')
 const assert = require('node:assert')
 const listHelper = require('../utils/list_helper')
 
-// Prueba para dummy
 test('dummy returns one', () => {
-  const blogs = [] // Blogs vacío
+  const blogs = []
   const result = listHelper.dummy(blogs)
   assert.strictEqual(result, 1)
 })
 
-// Pruebas para totalLikes
 describe('total likes', () => {
   test('when list is empty, returns zero', () => {
-    const blogs = [] // Blogs vacío
+    const blogs = []
     const result = listHelper.totalLikes(blogs)
     assert.strictEqual(result, 0)
   })
@@ -36,7 +34,7 @@ describe('total likes', () => {
         author: 'John Doe',
         likes: 5
       }
-    ] // Un solo blog con 5 likes
+    ]
     const result = listHelper.totalLikes(blogs)
     assert.strictEqual(result, 5)
   })
